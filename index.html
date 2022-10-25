@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html 
+<head>
+    <title> formulaire d'inscription </title>
+    <link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+<script>
+
+function terminer(formulaire){   
+    if(formulaire.chek.checked == true){formulaire.sub.disable = false}
+    if(formulaire.chek.checked == false){formulaire.sub.disable = true}
+}
+</script>
+<script>
+    function blink(a){
+
+        if(a.style.visibility == "visible"){a.style.visibilty = "hidden";}
+else{a.style.visibilty = "visible";}
+    }
+    setInterval("blink(v)", 500);
+
+</script>
+</head>
+
+<body>
+    <h1 id="v" style="visibility: visible;"> remplir votre formulaire </h1>
+
+    <form name="formulaire">
+        <fieldset>
+            <legend> vos informations </legend>
+            <table>
+                <tr>
+                    <td><label  for ="n"> nom de famille </label></td>
+                    <td><input type="text" name="n1" id="n"> </td>
+                </tr>
+                <tr>
+                <td><label for ="p"> prenom </label></td>
+                <td><imput type="text" name="p1" id="p"> </td>
+                </tr>
+                <tr>
+                    <td><label for ="D"> Date de naissane </label></td>
+                    <td><imput type="date" name="D1" id="p"> </td>
+                    </tr>
+                <tr>
+                    <td><label for ="h"> homme </label> <imput type= "radio" id="h" name="homme"> </td>
+                    <td><label for ="f"> femme </label> <imput type= "radio" id="f" name="femme"> </td>
+                 </tr>
+                  <tr>
+                    <td><label for ="pseudo1"> pseudo name </label></td>
+                    <td><imput type="text" name="pseudo" id="pseudo1"> </td>
+                </tr>
+                <tr>
+                    <td><label for ="e"> enter votre email </label></td>
+                    <td><imput type="email" name="email" id="e"> </td>
+                </tr>
+                <tr>
+                    <td><label for ="ps"> mot de passe </label></td>
+                    <td><input type="password" name="passe1" id="ps"> </td>
+                </tr>
+                <tr>
+                    <td><label for ="ps2">  confirmer votre mot de passe </label></td>
+                    <td><input type="password" name="passe2" id="ps2"> </td>
+                </tr>
+                <tr>
+                    <td><label for ="fi">  ajouter votre photo </label></t
+                        <td><input type="file" name="file1" id="fi" value="/*image*"> </td>
+                        <tr>
+                            <td colspan="2"> <textarea cols="40" rows="7"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="fi"> la verification est termine</label> 
+                                <imput type="checkbox" name="chek" id="ch"  onclick="terminer(this.form)"></td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td><input type="reset" name="reset1" id="R1" value="effacer la saisie"> </td>
+                        <td><imput type="submit" name="sub" value="inscription" disabled ></imput></td>
+                        </tr>
+                        <tr>
+                            <td><button name="affi" onclick="afficher()"> afficher vos donner de valider </button></td>
+                        </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+</body>
+</html>                                                                                      
